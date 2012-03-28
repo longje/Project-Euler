@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{175F99BB-EB61-4E29-843A-88C77E3D7BC0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectEuler</RootNamespace>
+    <AssemblyName>ProjectEuler</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="Math.cs" />
+    <Compile Include="Problem10.cs" />
+    <Compile Include="Problem11.cs" />
+    <Compile Include="Problem12.cs" />
+    <Compile Include="Problem13.cs" />
+    <Compile Include="Problem14.cs" />
+    <Compile Include="Problem15.cs" />
+    <Compile Include="Problem16.cs" />
+    <Compile Include="Problem17.cs" />
+    <Compile Include="Problem18.cs" />
+    <Compile Include="Problem19.cs" />
+    <Compile Include="Problem20.cs" />
+    <Compile Include="Problem21.cs" />
+    <Compile Include="Problem22.cs" />
+    <Compile Include="Problem23.cs" />
+    <Compile Include="Problem24.cs" />
+    <Compile Include="Problem25.cs" />
+    <Compile Include="Problem29.cs" />
+    <Compile Include="problem3.cs" />
+    <Compile Include="Problem30.cs" />
+    <Compile Include="Problem34.cs" />
+    <Compile Include="Problem35.cs" />
+    <Compile Include="Problem4.cs" />
+    <Compile Include="Problem48.cs" />
+    <Compile Include="Problem5.cs" />
+    <Compile Include="Problem6.cs" />
+    <Compile Include="Problem67.cs" />
+    <Compile Include="Problem7.cs" />
+    <Compile Include="Problem8.cs" />
+    <Compile Include="Problem9.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Solution.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="text\names.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
