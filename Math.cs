@@ -8,6 +8,17 @@ namespace ProjectEuler
 {
 	class CustomMath
 	{
+		public static int Power(int x, int y)
+		{
+			if (y == 0)
+				return 1;
+
+			if (y == 1)
+				return x;
+
+			return Power(x, --y) * x;
+		}
+
 		public static Boolean isPrime(long n)
 		{
 			double num = Math.Sqrt(n);

@@ -36,15 +36,26 @@ namespace ProjectEuler
 			new Problem21().Solve();
 			new Problem22().Solve();
 			new Problem23().Solve();
+			new Problem24().Solve();
 			new Problem25().Solve();
+			new Problem28().Solve();
 			new Problem29().Solve();
 			new Problem30().Solve();
 			new Problem34().Solve();
 			new Problem35().Solve();
+			new Problem36().Solve();
+			new Problem42().Solve();
 			new Problem67().Solve();
 			*/
+			Stopwatch watch = new Stopwatch();
+			watch.Start();
 
-			new Problem24().Solve();
+			//new Problem26().Solve();
+			new Problem42().Solve();
+			new Problem45().Solve();
+
+			watch.Stop();
+			Console.WriteLine("Time: {0}", watch.ElapsedMilliseconds);
 			//new Problem48().Solve();
 
 			//Problem 48

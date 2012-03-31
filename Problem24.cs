@@ -13,45 +13,49 @@ namespace ProjectEuler
 	 */
 	class Problem24: Solution
 	{
-		int[] choices = Enumerable.Range(0, 10).ToArray();
-		string[] newChoices = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+		string[] origChoices = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+		string[] newChoices;
 
 		public void Solve()
 		{
+			newChoices = origChoices;
+			int count = 0;
 			string[,] c;
-
+			
 			for (int z = 0; z < 9; z++)
 			{
-				c = new string[newChoices.Length, choices.Length];
+				c = new string[newChoices.Length, origChoices.Length];
+				count = 0;
 				for (int i = 0; i < newChoices.Length; i++)
 				{
-					for (int j = 0; j < choices.Length; j++)
+					for (int j = 0; j < origChoices.Length; j++)
 					{
-						if (newChoices[i].Contains(choices[j].ToString()))
+						if (newChoices[i].Contains(origChoices[j]))
 							continue;
 
-						c[i, j] = newChoices[i].ToString() + choices[j].ToString();
+						c[i, j] = newChoices[i] + origChoices[j];
+						count++;
 					}
 				}
-				newChoices = flattenArray(c);
+				newChoices = flattenArray(c, count);
 			}
 
-			Console.WriteLine("Solution for problem 24: {0} - Total Count: {1}", newChoices[999999], newChoices.Count());
+			Console.WriteLine("Solution for problem 24: {0} - Total Count: {1}", newChoices[999999], count);
 		}
 
-		private string[] flattenArray(string[,] array)
+		private string[] flattenArray(string[,] array, int size)
 		{
-			int newSize = array.Length;
-			List<string> theNewChoices = new List<string>(newSize);
+			string[] theNewChoices = new string[size];
+			int count = 0;
 			for (int i = 0; i < newChoices.Length; i++)
 			{
-				for (int j = 0; j < choices.Length; j++)
+				for (int j = 0; j < origChoices.Length; j++)
 				{
 					if (array[i, j] != null)
-						theNewChoices.Add(array[i, j]);
+						theNewChoices[count++] = array[i, j];
 				}
 			}
-			return theNewChoices.ToArray();
+			return theNewChoices;
 		}
 	}
 }
