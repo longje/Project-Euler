@@ -14,6 +14,7 @@ namespace ProjectEuler
 	{
 		static void Main(string[] args)
 		{
+<<<<<<< HEAD
 			var ListOfProblems
 				= new List<Solution>()
 				{
@@ -56,12 +57,52 @@ namespace ProjectEuler
 					new Problem67()
 				};
 
+=======
+			/*
+			new problem3().Solve();
+			new Problem4().Solve();
+			new Problem5().Solve();
+			new Problem6().Solve();
+			new Problem7().Solve();
+			new Problem8().Solve();
+			new Problem9().Solve();
+			new Problem10().Solve();
+			new Problem11().Solve();
+			new Problem12().Solve();
+			new Problem13().Solve();
+			new Problem14().Solve();
+			new Problem15().Solve();
+			new Problem16().Solve();
+			new Problem17().Solve();
+			new Problem18().Solve();
+			new Problem19().Solve();
+			new Problem20().Solve();
+			new Problem21().Solve();
+			new Problem22().Solve();
+			new Problem23().Solve();
+			new Problem24().Solve();
+			new Problem25().Solve();
+			new Problem28().Solve();
+			new Problem29().Solve();
+			new Problem30().Solve();
+			new Problem34().Solve();
+			new Problem35().Solve();
+			new Problem36().Solve();
+			new Problem42().Solve();
+			new Problem67().Solve();
+			*/
+>>>>>>> 2adf96cfd37225daa16b6c0fbf78cfa263271b72
 			Stopwatch watch = new Stopwatch();
 			watch.Start();
 
 			//new Problem26().Solve();
+<<<<<<< HEAD
 			new Problem38().Solve();
 			//new Problem32().Solve();
+=======
+			new Problem42().Solve();
+			new Problem45().Solve();
+>>>>>>> 2adf96cfd37225daa16b6c0fbf78cfa263271b72
 
 			watch.Stop();
 			Console.WriteLine("Time: {0}", watch.ElapsedMilliseconds);

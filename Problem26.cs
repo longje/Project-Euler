@@ -23,6 +23,7 @@ namespace ProjectEuler
 	{
 		public void Solve()
 		{
+<<<<<<< HEAD
 			var listOfStrings = new Dictionary<int, String>();
 
 			for (int i = 2; i < 1000; i++)
@@ -72,6 +73,97 @@ namespace ProjectEuler
 				i++;  //increment count
 			}
 			return "0." + fraction;
+=======
+			string[] results = new string[998];
+			int count = 0;
+			
+			for (int i = 2; i < 1000; i++)
+			{
+				var temp = (1.0m / i).ToString().Replace("0.", "");
+				results[count++] = temp.Substring(0, temp.Length - 1);
+			}
+
+			var result = results
+							.Where(x => x != null)
+							.Select((x, i) => Tuple.Create(i, x, getPattern(x), getPattern(x).Length))
+							.OrderByDescending(x => x.Item4)
+							.ToList();
+
+			foreach (var item in result)
+			{
+				//Console.WriteLine("Pattern: {0} for {1}", item.Item2, item.Item3);
+				
+			}
+			 
+			//var test = (1.0m / 7.0m).ToString().Replace("0.", "");
+
+			//Console.WriteLine("Pattern: {0} for {1}", getPattern(test), test);
+		}
+
+
+		private Boolean patternTest(string d)
+		{
+			if (d[0].Equals(d[d.Length-1]))
+				return false;
+
+			if (d.Length > 3 && d[1].Equals(d[2]))
+				return false;
+
+			return true;
+		}
+
+		private string getPattern(String d)
+		{
+			if (d.Length < 3)
+				return d;
+
+			string pattern = "";
+			int[] count = new int[d.Length];
+			
+			for (int i = 0; i < d.Length; i++)
+			{
+				count[i] = 1;
+				for (int j = i + 1; j < d.Length; j++)
+				{
+					if (d[i].Equals(d[j]))
+						count[i]++;
+				}
+				if (count[i] > 0)
+					pattern += d[i];
+
+				if (count.Sum() >= d.Length)
+					break;
+			}
+
+			if (pattern.Length * 2 < d.Length && d.Substring(pattern.Length).Contains(pattern))
+				return pattern; //+ finishPattern(d.Substring(pattern.Length), pattern);
+			else
+				return String.Empty;
+
+		}
+
+		private string finishPattern(string d, string c)
+		{
+			int i = 0;
+			while (c.Length < d.Length && !startsWith(d.Substring(i), c))
+				c += d[i++];
+			return c;
+		}
+
+		private Boolean startsWith(string d, string c)
+		{
+			if (c.Length > d.Length)
+				return false;
+
+			for (int i = 0; i < c.Length; i++)
+			{
+				if (c[i].Equals(d[i]))
+					continue;
+				else
+					return false;
+			}
+			return true;
+>>>>>>> 2adf96cfd37225daa16b6c0fbf78cfa263271b72
 		}
 	}
 }
