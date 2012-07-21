@@ -26,31 +26,10 @@ namespace ProjectEuler
             Console.WriteLine("{0} is an odd composite that doesn't fit Goldbach conjecture.", i);
         }
 
-        private bool isInSquare(long key)
-        {
-            int begin = 0;
-            int end = squares.Count();
-            while (end >= begin)
-            {
-                int mid = (end + begin) >> 1;
-
-                if (squares[mid] < key)
-                    begin = mid + 1;
-                else if (squares[mid] > key)
-                    end = mid - 1;
-                else
-                    return true;
-            }
-            return false;
-        }
-
         private bool isASquare(long n)
         {
-            return isInSquare(n);
-            /*
             var temp = Math.Sqrt(n);
             return ( temp - ((long)temp) ) == 0.0;
-             */
         }
 
         private bool isGoldbach(long n)
