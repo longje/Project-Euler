@@ -22,11 +22,7 @@ namespace ProjectEuler
 		public static Boolean isPrime(long n)
 		{
 			double num = Math.Sqrt(n);
-<<<<<<< HEAD
             if (n < 0) { return false; }
-=======
-			
->>>>>>> 2adf96cfd37225daa16b6c0fbf78cfa263271b72
 			if (n == 4d) { return false; }
 			if (n == 1d) { return false; }
 
@@ -99,10 +95,7 @@ namespace ProjectEuler
 			}
 
 		}
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 2adf96cfd37225daa16b6c0fbf78cfa263271b72
 	}
 }

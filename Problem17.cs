@@ -12,11 +12,7 @@ namespace ProjectEuler
 		 * hundred and fifteen) contains 20 letters. The use of "and" when writing out numbers is in compliance with British usage.
 		 * class Problem17: Solution
 		 */
-<<<<<<< HEAD
 	public class Problem17:Solution
-=======
-	public class Problem17
->>>>>>> 2adf96cfd37225daa16b6c0fbf78cfa263271b72
 	{
 		public void Solve()
 		{
