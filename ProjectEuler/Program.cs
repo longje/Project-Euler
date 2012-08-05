@@ -77,6 +77,7 @@ namespace ProjectEuler
 			Stopwatch watch = new Stopwatch();
 			watch.Start();
 
+<<<<<<< HEAD
             /* Amortization for loan */
             /*
             for (double n = 2; n < 360; n++)
@@ -95,6 +96,8 @@ namespace ProjectEuler
                 Console.WriteLine("For {2} payments, you're monthly payment is: {0} and you will the total interest paid is {1}", result, interestPaid, n);
             }
             */
+=======
+>>>>>>> 026c19f614b0b3c3fafa634960833e640c2ee0c2
             //new Problem92().Solve();
             new Problem57().Solve();
             //new Problem63().Solve();
@@ -102,6 +105,7 @@ namespace ProjectEuler
 			watch.Stop();
 			Console.WriteLine("Time: {0}", watch.ElapsedMilliseconds);
             Console.WriteLine();
+<<<<<<< HEAD
 			//new Problem48().Solve();
 
 			//Problem 48
@@ -118,6 +122,9 @@ namespace ProjectEuler
 			//}
 
 			//Console.WriteLine(result);
+=======
+
+>>>>>>> 026c19f614b0b3c3fafa634960833e640c2ee0c2
 		}
 	}
 }
